@@ -1,4 +1,4 @@
-# SOC Alert Cheat Sheet
+# SOC Alert Cheat Sheet - Microsoft
 ## Don't know where to start?
 **Find all tables where a string exists**
 
@@ -7,8 +7,7 @@ search "STRING"
 | summarize $Table
 ```
 
-## Microsoft
-**Connection to a custom network indicator**
+## Connection to a custom network indicator
 
 This is a Microsoft alert that is customised by the client. In Defender, you have the ability to add URLs, IP addresses, domains, and even apps to a custom list. Access to these things can be blocked and create an alert at the same time.
 
@@ -31,7 +30,7 @@ How to configure this alert:
 * Fill out the form. This is where you are able to set controls around file download. 
 
 
-**Attempt to bypass conditional access policy**
+## Attempt to bypass conditional access policy
 
 When logging into Microsoft, one of the values that needs to be fulfilled is the "ConditionAccessStatus" column. This can equal one of the following:
 * ConditionalAccessStatus == 0 Success
@@ -63,14 +62,14 @@ Other Notes:
 * Guests to tenancies will appear in the SignInLogs for the tenancy.
 * If you are sent a link to a document (for example), you click on it, and you attempt to sign in to view the document, you will also appear in that tenancy's sign in logs, even if you are not a guest or part of their tenancy.
 
-**SharePointFileOperation via previously unseen IPs**
+## SharePointFileOperation via previously unseen IPs
 Identifies anomalies using user behavior by setting a threshold for significant changes in file upload/download activities from new IP addresses. It establishes a baseline of typical behavior, compares it to recent activity, and flags deviations exceeding a default threshold of 25.
 
-**NRT User added to Microsoft Entra ID Privileged Groups involving multiple users**
+## NRT User added to Microsoft Entra ID Privileged Groups involving multiple users
 
 This triggers whenever any user is added to any of the Privileged groups. This also applies for PIM.
 
-**Local admin account used to logon into the computer**
+## Local admin account used to logon into the computer
 
 Pretty self explanatory, user has logged into computer using Local Admin account. 
 
