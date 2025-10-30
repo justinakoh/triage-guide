@@ -1,11 +1,23 @@
 # SOC Alert Cheat Sheet - Microsoft
 ## Don't know where to start?
+**Where to run queries?**
+
+Microsoft uses Kusto Query Language (KQL) to query for datasets (such as logs). There are two main regions where you can run these queries:
+* Microsoft Defender - 
+* Micrsoft Sentinel - 
+
+These two places will have different subset of logs that you can pull from, and this means that there will be different things you can find within:
+* Microsoft Entra - identity related information
+* Microsoft Sentinel - 
+* Microsoft Defender - this is better for things to do with endpoints and for real-time actions 
+
 **Find all tables where a string exists**
 
 ```
 search "STRING"
 | summarize $Table
 ```
+Alternatively, you could also just run `serach "STRING"` to get back all the logs where that string is seen within. 
 
 ## Connection to a custom network indicator
 
@@ -76,4 +88,8 @@ Pretty self explanatory, user has logged into computer using Local Admin account
 What to look for:
 * Check that there are no anomalies within log in history. Check that the host, IP, location are all typical for the user 
 **Insider Risk_Risky User Access By Application involving one user**
+
+## A possible vulnerability to SQL Injection involving one user 
+
+This occurs when an application generates a faulty SQL statement in the database which indicates a possible vulnerability to SQL injection attacks. 
 
