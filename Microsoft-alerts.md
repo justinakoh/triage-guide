@@ -3,8 +3,8 @@
 **Where to run queries?**
 
 Microsoft uses Kusto Query Language (KQL) to query for datasets (such as logs). There are two main regions where you can run these queries:
-* Microsoft Defender - 
-* Micrsoft Sentinel - 
+* Microsoft Defender - Investigation and response > Hunting > Advanced Hunting
+* Micrsoft Sentinel - General > Logs
 
 These two places will have different subset of logs that you can pull from, and this means that there will be different things you can find within:
 * Microsoft Entra - identity related information
